@@ -1,0 +1,118 @@
+:root {
+    --size-div:3;
+    --page-width:200px;
+    --page-height:100px;
+}
+body {
+    margin:  0 0;
+    background-image: url("6642093.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size:calc(8.3px * var(--size-div));
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: bold; */
+}
+.letter {
+    display: grid;
+    place-items:center;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    vertical-align: middle;
+    justify-content: center;
+}
+.increment{
+    transition: all 0.5s ease-in-out;
+}
+.increment:hover {
+    /* --size-div:3.1; */
+    transform: scale(1.2);
+    background: rgba(165, 163, 163, 0.5);
+}
+.letter .page {
+    /* background: rgb(255, 237, 237); */
+    background: rgba(139, 138, 138, 0.5);
+    width: calc(var(--page-width) * var(--size-div));
+    height: calc(var(--page-height) * var(--size-div));
+    margin: auto;
+    border-radius: calc(3.3px * var(--size-div));
+    /* box-shadow:calc(1.3px  * --size-div) calc(2.3px * var(--size-div)) #888888; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+
+.arrow-down {
+    width: 0; 
+    height: 0; 
+    border-left: calc(100px * var(--size-div)) solid transparent;
+    border-right:  calc(100px * var(--size-div)) solid transparent;
+    border-radius: calc(3.3px * var(--size-div));
+    border-top: calc(60px * var(--size-div)) solid #ee462c;
+}
+
+#hny {
+    text-align: center;
+    display: none;
+
+}
+.bottom_from {
+    padding:calc(26px * var(--size-div)) calc(7px*3);
+user-select: none;
+}
+.btn {
+    padding: 10px; 
+    min-width: 100px; 
+    outline: none;
+    border: none; 
+    color: white; 
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.3s ease-in-out;
+}
+.play{
+    background: green; 
+}
+.play:hover{
+    background-color: rgb(6, 173, 6);
+}
+.pause{
+    background: gray; 
+}
+.pause:hover{
+    background-color: rgb(180, 163, 163);
+}
+#tet {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.tetkimidev {
+    padding-left: 15px;
+    font-size: 14px;
+    line-height: 24px;
+    position: fixed;
+    color: #ebebeb;
+    user-select: none;
+    z-index: 1000;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.tetkimidev:hover {
+    cursor: default
+}
+.kimidev-tet-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999
+}
+
+@media(max-width:767px) {
+    .kimidev-tet-right {
+        display: none !important
+    }
+}
